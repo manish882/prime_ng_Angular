@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  app-login {
+    flex: 1;
+    background-color: #fff;
+  }
+  
+  app-signup {
+    flex: 1;
+  }
+  

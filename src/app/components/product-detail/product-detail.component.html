@@ -1,0 +1,25 @@
+<div *ngIf="product" class="product-details">
+    <p-card header="{{ product.title }}" subheader="{{ product.category }}">
+      <ng-template pTemplate="content">
+        <div class="product-content">
+          <div class="product-image">
+            <img [src]="product.image" alt="{{ product.title }}" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">{{ product.title }}</h3>
+            <p class="product-description">{{ product.description }}</p>
+            <h4 class="product-price">$ {{ product.price }}</h4>
+            <div class="product-rating">
+              <p-rating [(ngModel)]="product.rating.rate" [readonly]="true" [stars]="5"></p-rating>
+              <span>{{ product.rating.rate }} ({{ product.rating.count }} reviews)</span>
+            </div>
+            <div class="product-actions">
+              <button pButton type="button" label="Add to Cart" icon="pi pi-shopping-cart"></button>
+              <button pButton type="button" label="Buy Now" icon="pi pi-credit-card"></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+  

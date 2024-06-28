@@ -1,0 +1,21 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+  }
+  
+  p-card {
+    width: 400px;
+    padding: 2rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+  }
+  
+  button {
+    margin-top: 2rem;
+  }
+  
