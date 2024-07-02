@@ -1,8 +1,16 @@
- <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
     <div formArrayName="items">
-        <div></div>
+      <div *ngFor="let field of formConfig; let i = index">
+        <label [for]="field.name">{{ field.label }}</label>
+        <input [type]="field.type" [formControlName]="i" [id]="field.name" />
+        <div *ngIf="dynamicForm.get('items')?.get(i.toString())?.invalid && dynamicForm.get('items')?.get(i.toString())?.touched">
+          <span *ngIf="dynamicForm.get('items')?.get(i.toString())?.errors?.['required']">{{ field.label }} is required</span>
+          <span *ngIf="dynamicForm.get('items')?.get(i.toString())?.errors?.['minlength']">Minimum length for {{ field.label }} is {{ dynamicForm.get('items')?.get(i.toString())?.errors?.['minlength']?.requiredLength }}</span>
+          <span *ngIf="dynamicForm.get('items')?.get(i.toString())?.errors?.['email']">Invalid email format</span>
+          <span *ngIf="dynamicForm.get('items')?.get(i.toString())?.errors?.['min']">Minimum value for {{ field.label }} is {{ dynamicForm.get('items')?.get(i.toString())?.errors?.['min']?.min }}</span>
+        </div>
+      </div>
     </div>
-
-
-
- </form>
+    <button type="submit">Submit</button>
+  </form>
+  
