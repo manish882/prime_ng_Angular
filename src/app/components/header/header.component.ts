@@ -17,9 +17,14 @@ export class HeaderComponent {
         routerLink: '/home'
       },
       {
-        label: 'Products',
+        label :'Data',
+        icon:'pi-table',
+        routerLink: '/Data'
+      },
+      {
+        label: 'Forms',
         icon: 'pi pi-fw pi-list',
-        routerLink: '/products'
+        routerLink: '/forms'
       },
       {
         label: 'Login',
@@ -30,7 +35,12 @@ export class HeaderComponent {
         label: 'Signup',
         icon: 'pi pi-fw pi-user-plus',
         routerLink: '/signup'
-      }
+      },
+      {
+        label: 'Cart',
+        icon: 'pi-cart-arrow-down',
+        routerLink: '/cart'
+      },
     ];
   }
 }

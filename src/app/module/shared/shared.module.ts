@@ -5,7 +5,9 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { RatingModule } from 'primeng/rating';
- 
+import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
+
 
 @NgModule({
   declarations: [],
@@ -17,8 +19,9 @@ import { RatingModule } from 'primeng/rating';
     ButtonModule,
     InputTextModule,
     CardModule,
-    RatingModule
-
+    RatingModule,
+    TableModule,
+    TagModule
   ]
 })
 export class SharedModule { }

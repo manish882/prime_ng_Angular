@@ -20,7 +20,11 @@ import { SharedModule } from './module/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
+ import { DynamicTableComponent } from './Widget/dynamic-table/dynamic-table.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { DynamicFormsComponent } from './Widget/dynamic-forms/dynamic-forms.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +39,12 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     OrderHistoryComponent,
     HomeComponent,
-    NotFoundComponent
-  ],
+    NotFoundComponent,
+    DynamicTableComponent,
+    DataTableComponent,
+    DynamicFormsComponent,
+    DynamicFormComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,6 +55,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
